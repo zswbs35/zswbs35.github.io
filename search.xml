@@ -3,8 +3,8 @@
   <entry>
     <title>netcat的简单使用</title>
     <url>/zswbs.coding.me/2019/10/17/%E5%85%B3%E4%BA%8Enetcat%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%A5%E5%91%8A/</url>
-    <content><![CDATA[<h1 id="关于netcat的简单使用报告"><a href="#关于netcat的简单使用报告" class="headerlink" title="关于netcat的简单使用报告"></a>关于netcat的简单使用报告</h1><h2 id="1-背景介绍"><a href="#1-背景介绍" class="headerlink" title="1.背景介绍"></a>1.背景介绍</h2><p> 在网络工具中，具有“瑞士军刀”美誉的net cat。是一个简单易用的基于tcp/ip协议（c/s模型）的“瑞士军刀”。</p><h2 id="2-使用范围"><a href="#2-使用范围" class="headerlink" title="2.使用范围"></a>2.使用范围</h2><p>针对功能强大的的netcat展开，我将以图文的方式讲解netcat基本使用、命令参数、文件传输、建立后门、端口转发、实现内外网突破。</p><a id="more"></a>
-
+    <content><![CDATA[<h1 id="关于netcat的简单使用报告"><a href="#关于netcat的简单使用报告" class="headerlink" title="关于netcat的简单使用报告"></a>关于netcat的简单使用报告</h1><h2 id="1-背景介绍"><a href="#1-背景介绍" class="headerlink" title="1.背景介绍"></a>1.背景介绍</h2><p> 在网络工具中，具有“瑞士军刀”美誉的net cat。是一个简单易用的基于tcp/ip协议（c/s模型）的“瑞士军刀”。</p>
+<h2 id="2-使用范围"><a href="#2-使用范围" class="headerlink" title="2.使用范围"></a>2.使用范围</h2><p>针对功能强大的的netcat展开，我将以图文的方式讲解netcat基本使用、命令参数、文件传输、建立后门、端口转发、实现内外网突破。</p>
 <h2 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3.使用场景"></a>3.使用场景</h2><p>客户端连接防火墙被拒绝，但防火墙的过滤机制并不能过滤服务器外联产生的流量，此时将会于客户端连接,装备nc的客户端将会成为nc的服务端，而连接的服务端就成为了nc的客户端，达到突破网络限制的目的。</p>
 <h2 id="4-具体使用"><a href="#4-具体使用" class="headerlink" title="4.具体使用"></a>4.具体使用</h2><h3 id="1-基础使用方法"><a href="#1-基础使用方法" class="headerlink" title="1.基础使用方法"></a>1.基础使用方法</h3><h4 id="（1）创建一个服务器端方法"><a href="#（1）创建一个服务器端方法" class="headerlink" title="（1）创建一个服务器端方法"></a>（1）创建一个服务器端方法</h4><p><code>nc -l -p [localport]</code></p>
 <h4 id="2-创建一个客户端方法（连接服务端）"><a href="#2-创建一个客户端方法（连接服务端）" class="headerlink" title="(2)   创建一个客户端方法（连接服务端）"></a>(2)   创建一个客户端方法（连接服务端）</h4><p><code>-nc [remote_addr] [remoteport]</code></p>
